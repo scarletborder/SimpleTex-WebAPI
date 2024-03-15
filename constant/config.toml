@@ -1,0 +1,4 @@
+# [Permissions]
+access_token = "" # string, such as "EpicmoCrossDress"
+# [Requests]
+proxies = ""
