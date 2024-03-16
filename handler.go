@@ -14,6 +14,7 @@ import (
 
 func run() {
 	r := gin.Default()
+	gin.SetMode(gin.ReleaseMode)
 
 	// 定义接受表单的路由
 	r.POST("/upload", func(c *gin.Context) {
@@ -90,5 +91,5 @@ func run() {
 		c.String(http.StatusOK, str)
 	})
 
-	r.Run(":8080") // 监听并在 0.0.0.0:8080 上启动服务
+	r.Run(constant.Config().Addr) // 监听并在 0.0.0.0:8080 上启动服务
 }
