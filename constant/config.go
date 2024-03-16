@@ -9,7 +9,7 @@ import (
 type Cfg struct {
 	AccessToken string `toml:"access_token"`
 	Proxies     string `toml:"proxies"`
-	Addr        string `toml:"addr" default:"addr"`
+	Addr        string `toml:"addr" default:":8080"`
 }
 
 var (
