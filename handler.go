@@ -16,6 +16,11 @@ func run() {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"msg": "Please use example.com/upload to fetch service. You can refer API doc in github.com/scarletborder/SimpleTex-WebAPI"})
+
+	})
+
 	// 定义接受表单的路由
 	r.POST("/upload", func(c *gin.Context) {
 		// 验证Token
